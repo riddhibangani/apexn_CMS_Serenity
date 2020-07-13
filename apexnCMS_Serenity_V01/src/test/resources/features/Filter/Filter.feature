@@ -16,12 +16,12 @@ Feature: Apply filters on Instructors, Music and Workouts
 
     Examples: 
       | filter  |
+      | All     |
       | Active  |
-      #| Active  |
-      #| Archive |
+      | Archive |
 
   @filterMusic
-  Scenario Outline: Check filters for Instructors
+  Scenario Outline: Check filters for Music Category
     When user click on the main menu
     And select the option as Music categories
     And select "<filter>"

@@ -48,8 +48,9 @@ public class InstructorSteps {
 	}
 
 	@When("^click on select the file to import at \"([^\"]*)\"$")
-	public void click_on_select_the_file_to_import_at_something(String filepath) throws InterruptedException 
+	public void click_on_select_the_file_to_import_at_something(String filepath)  
 	{
+		
 		instructor.selectFiletoimport(filepath);
 
 	}

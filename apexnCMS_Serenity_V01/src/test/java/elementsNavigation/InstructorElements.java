@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -69,12 +70,22 @@ public class InstructorElements extends PageObject
 			
 		}
 		
-		public void uploadfile(String filepath)
+		public InstructorElements(WebDriver driver)
 		{
-//			lnkSelectFile.waitUntilClickable().sendKeys(filepath);
+			super(driver);
+		}
+		
+		public void uploadfile(String filename)
+		{
 			
-			FileToUpload fileToUpload = new FileToUpload(getDriver(), "1589466155796-1024.png"); 
+			
+			System.out.println("----------Uploadfile start--------"+ filename);
+			
+			FileToUpload fileToUpload = new FileToUpload(getDriver(), filename); 
+			
 			fileToUpload.fromLocalMachine().to(lnkSelectFile);
+			
+//			upload(filename).to(lnkSelectFile);
 			
 		}
 		

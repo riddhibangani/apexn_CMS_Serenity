@@ -30,7 +30,7 @@ Feature: Ability to add and edit instructors
     And update name and bio
     And click on save button
     Then the instructor is updated successfully
-    And close the browser
+  
 
   @EditInst
   Scenario: Edit existing instructor
@@ -38,7 +38,7 @@ Feature: Ability to add and edit instructors
     And update name and bio
     And click on save button
     Then the instructor is updated successfully
-    And close the browser
+   
 
   @archiveInst
   Scenario: Archive existing instructor
@@ -46,4 +46,4 @@ Feature: Ability to add and edit instructors
     When the archive option is selected
     And click on save button
     Then the instructor is archived
-    And close the browser
+    

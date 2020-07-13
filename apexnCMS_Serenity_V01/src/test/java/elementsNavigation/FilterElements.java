@@ -8,10 +8,11 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
+import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 
-public class FilterElements {
+public class FilterElements extends PageObject {
 	
 	public List<String> names = null;
 	public int allelements = 0;
