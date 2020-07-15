@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		dryRun = false,
-		tags= "@addInst",
+		tags= "@addandEditInst",
 		
         plugin = {"pretty"},
         features = "src/test/resources/features",

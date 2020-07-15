@@ -30,7 +30,7 @@ public class InstructorPage
 	}
 	
 	@Step
-	public void selectFiletoimport(String filepath) 
+	public void selectFiletoimport(String filepath) throws InterruptedException 
 	{
 	
 		instelement.uploadfile(filepath);
@@ -46,6 +46,12 @@ public class InstructorPage
 	public void verifyAddedInst()
 	{
 		instelement.verifyaddedInst();
+	}
+	
+	@Step
+	public void clickonNewAddedInstructor()
+	{
+		instelement.clickonNewlyAddedInst();
 	}
 	
 	

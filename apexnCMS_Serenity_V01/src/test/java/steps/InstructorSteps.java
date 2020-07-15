@@ -48,7 +48,7 @@ public class InstructorSteps {
 	}
 
 	@When("^click on select the file to import at \"([^\"]*)\"$")
-	public void click_on_select_the_file_to_import_at_something(String filepath)  
+	public void click_on_select_the_file_to_import_at_something(String filepath) throws InterruptedException  
 	{
 		
 		instructor.selectFiletoimport(filepath);
@@ -66,5 +66,12 @@ public class InstructorSteps {
 	{
 		instructor.verifyAddedInst();
 	}
+	
+	@When("^click on the new instructor created$")
+    public void click_on_the_new_instructor_created() {
+		
+		instructor.clickonNewAddedInstructor();
+        
+    }
 
 }
