@@ -42,8 +42,15 @@ Feature: Ability to add and edit instructors
 
   @archiveInst
   Scenario: Archive existing instructor
-    And click on the existing instructor
+    And click on the existing active instructor
     When the archive option is selected
     And click on save button
     Then the instructor is archived
+    
+    @unarchiveInst
+  Scenario: Archive existing instructor
+    And click on the existing archived instructor
+    When the archive option is deselected
+    And click on save button
+    Then the instructor is unarchived
     

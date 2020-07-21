@@ -11,12 +11,14 @@ import net.thucydides.core.annotations.Step;
 public class ActionsElements extends PageObject{
 	
 	@FindBy(id = "submit-button")
-	@CacheLookup
+//	@CacheLookup
 	WebElementFacade btnSave_Inst;
 	
-	@FindBy(xpath = "//*[@id=\"is-archived\"]/label/div")
-	@CacheLookup
-	WebElement checkboxArchive;
+	@FindBy(xpath = "//*[@id='is-archived']/label")
+//	@CacheLookup
+	WebElementFacade checkboxArchive;
+	
+	//mat-checkbox[@id='is-archived']/lable
 	
 	@Step
 	public void clicksaveButton()
@@ -27,7 +29,9 @@ public class ActionsElements extends PageObject{
 	
 	@Step
 	public void selectArchive()
+	
 	{
+		checkboxArchive.waitUntilClickable();
 		Boolean checekboxDisplay = checkboxArchive.isDisplayed();
 		System.out.println("Is the checkbox displayed: " + checekboxDisplay);
 		
@@ -38,6 +42,41 @@ public class ActionsElements extends PageObject{
 		
 		Boolean checkboxStatus = checkboxArchive.isSelected();
 		System.out.println("The updated status of checkbox is: "+ checkboxStatus);
+	}
+	@Step
+	public void deselectArchive() 
+	{
+//		checkboxArchive.waitUntilClickable();
+//		
+//		Boolean checekboxDisplay = checkboxArchive.isDisplayed();
+//		System.out.println("Is the checkbox displayed: " + checekboxDisplay);
+//		
+//		if(checkboxArchive.isSelected())
+//		{
+//			Boolean checkboxSelected = checkboxArchive.isSelected();
+//			System.out.println("Is the checkbox selected: "+ checkboxSelected);
+//		}
+//		else
+//		{
+//			checkboxArchive.click();
+//			
+//			Boolean checkboxStatus = checkboxArchive.isSelected();
+//			System.out.println("The updated status of checkbox is: "+ checkboxStatus);
+//		}
+		
+		
+		checkboxArchive.waitUntilClickable();
+		Boolean checekboxDisplay = checkboxArchive.isDisplayed();
+		System.out.println("Is the checkbox displayed: " + checekboxDisplay);
+		
+		Boolean checkboxSelected = checkboxArchive.isSelected();
+		System.out.println("Is the checkbox selected: "+ checkboxSelected);
+		
+		checkboxArchive.click();
+		
+		Boolean checkboxStatus = checkboxArchive.isSelected();
+		System.out.println("The updated status of checkbox is: "+ checkboxStatus);
+		
 	}
 	
 

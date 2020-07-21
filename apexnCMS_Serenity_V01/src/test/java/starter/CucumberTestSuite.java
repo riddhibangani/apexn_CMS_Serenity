@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		dryRun = false,
-		tags= "@addandEditInst",
+//		tags= "@unarchiveInst",
 		
         plugin = {"pretty"},
         features = "src/test/resources/features",
@@ -22,6 +22,7 @@ public class CucumberTestSuite extends GenerateRandomeString{
 	 public static void generateramdomestring() 
 	 {
 		randomestring();
+		
 	 }
 	
 	

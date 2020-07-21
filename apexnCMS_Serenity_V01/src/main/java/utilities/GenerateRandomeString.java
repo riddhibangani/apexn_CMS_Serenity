@@ -17,6 +17,9 @@ public class GenerateRandomeString {
 	public static String InstBio1 = null;
 	public static String MscTitle1 = null;
 	
+	public static int randomeInst = 0;
+	public static Faker faker = new Faker();
+	
 	
 	
 	
@@ -24,20 +27,30 @@ public class GenerateRandomeString {
 
 			public static void randomestring()
 			{
-//				InstName = RandomStringUtils.randomAlphanumeric(5);
-				 InstBio = RandomStringUtils.randomAlphanumeric(20);
-				 MscTitle = RandomStringUtils.randomAlphanumeric(6);
+				
 				 
-//				 InstName1 = RandomStringUtils.randomAlphanumeric(5);
-				 InstBio1 = RandomStringUtils.randomAlphanumeric(20);
-				 MscTitle1 = RandomStringUtils.randomAlphanumeric(10);
 				 
-				 Faker faker = new Faker();
 				 
 				 InstName = faker.name().firstName();
 				 InstName1 = faker.name().firstName();
+				 MscTitle =faker.music().genre();
+				 MscTitle1 =faker.music().genre();
+				 
+				 
+				 
+				 InstBio = RandomStringUtils.randomAlphanumeric(20);
+				 InstBio1 = RandomStringUtils.randomAlphanumeric(20);
+				 
+				 
 //				 InstBio = faker.name().fullName();
 //				 Date = faker.date().future(100, TimeUnit.HOURS);
 //				 Date = faker.date().
+			}
+			
+			public static int randomenumbers(int max)
+			{
+				
+				randomeInst = faker.number(). numberBetween(0, max);
+				return randomeInst;
 			}
 }

@@ -17,16 +17,16 @@ public class InstructorSteps {
 
 	@Steps
 	ActionsElements action; 
-	
+
 	@Steps
 	DashboardPage dash;
-	
-	
+
+
 	@When("^user click on the main menu$")
-    public void user_click_on_the_main_menu()
-    {
+	public void user_click_on_the_main_menu()
+	{
 		dash.clickMainMenu();
-    }
+	}
 
 
 	@And("^select the option as Instructor$")
@@ -50,7 +50,7 @@ public class InstructorSteps {
 	@When("^click on select the file to import at \"([^\"]*)\"$")
 	public void click_on_select_the_file_to_import_at_something(String filepath) throws InterruptedException  
 	{
-		
+
 		instructor.selectFiletoimport(filepath);
 
 	}
@@ -66,12 +66,72 @@ public class InstructorSteps {
 	{
 		instructor.verifyAddedInst();
 	}
-	
+
 	@When("^click on the new instructor created$")
-    public void click_on_the_new_instructor_created() {
-		
+	public void click_on_the_new_instructor_created() {
+
 		instructor.clickonNewAddedInstructor();
-        
+
+	}
+
+	@And("^update name and bio$")
+	public void update_name_and_bio() 
+	{
+		instructor.updateInstNameAndBio();
+	}
+
+	@Then("^the instructor is updated successfully$")
+	public void the_instructor_is_updated_successfully()
+	{
+		instructor.verifyUpdatedInst();
+	}
+
+	@And("^click on the existing instructor$")
+	public void click_on_the_existing_instructor()
+	{
+		instructor.clickOnExistingInstructor();
+	}
+
+	@Then("^the instructor is archived$")
+	public void the_instructor_is_archived() 
+	{
+		instructor.verifyInstArchive();
+	}
+
+	@And("^click on the existing active instructor$")
+	public void click_on_the_existing_active_instructor() 
+	{
+		instructor.clickOnActiveInst();
+	}
+	
+	@And("^click on the existing archived instructor$")
+    public void click_on_the_existing_archived_instructor()
+    {
+		instructor.clickOnArchivedInst();
+    }
+	
+	@When("^the archive option is deselected$")
+	public void the_archive_option_is_deselected() 
+	{
+
+		action.deselectArchive();
+	}
+	
+	@Then("^the instructor is unarchived$")
+    public void the_instructor_is_unarchived()
+    {
+		instructor.verifyInstUnArchive();
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+

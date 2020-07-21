@@ -53,6 +53,53 @@ public class InstructorPage
 	{
 		instelement.clickonNewlyAddedInst();
 	}
+
+	@Step
+	public void updateInstNameAndBio() 
+	{
+		
+		instelement.updateNameAndBioInst();
+	}
+
+	@Step
+	public void verifyUpdatedInst() 
+	{
+		instelement.verifyupdatedInst();
+		
+	}
+	
+	@Step
+	public void clickOnExistingInstructor() 
+	{
+		instelement.clickOnExistingInst();
+		
+	}
+	
+	@Step
+	public void verifyInstArchive() 
+	{
+		instelement.VerifyArchivedInstructor();
+		
+	}
+	@Step
+	public void clickOnActiveInst() 
+	{
+		instelement.ClickOnActiveInstructor();
+		
+	}
+	@Step
+	public void verifyInstUnArchive() 
+	{
+		instelement.VerifyUnArchivedInstructor();
+		
+	}
+
+	@Step
+	public void clickOnArchivedInst() 
+	{
+		instelement.ClickOnArchivedInstructor();
+		
+	}
 	
 	
 	
