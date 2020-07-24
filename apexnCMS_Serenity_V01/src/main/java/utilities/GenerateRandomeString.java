@@ -16,8 +16,11 @@ public class GenerateRandomeString {
 	public static String InstName1 = null;
 	public static String InstBio1 = null;
 	public static String MscTitle1 = null;
+	public static String WrkTitle = null;
+	public static String WrkDesc = null;
 	
 	public static int randomeInst = 0;
+	public static int wrkduration = 0;
 	public static Faker faker = new Faker();
 	
 	
@@ -35,8 +38,10 @@ public class GenerateRandomeString {
 				 InstName1 = faker.name().firstName();
 				 MscTitle =faker.music().genre();
 				 MscTitle1 =faker.music().genre();
-				 
-				 
+				 WrkTitle = faker.harryPotter().character();
+				 WrkDesc = faker.leagueOfLegends().quote();
+				 wrkduration = faker.number().numberBetween(0, 4000);
+				 WrkDesc = faker.expression("Description for the workout" + WrkTitle);
 				 
 				 InstBio = RandomStringUtils.randomAlphanumeric(20);
 				 InstBio1 = RandomStringUtils.randomAlphanumeric(20);

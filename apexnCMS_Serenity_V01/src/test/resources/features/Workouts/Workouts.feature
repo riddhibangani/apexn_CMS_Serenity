@@ -15,7 +15,7 @@ Feature: Ability to add and edit Workouts
     When click on Create a new workout button
     And enter Title and Description for Workouts
     And enter VideoURL as "https://player.vimeo.com/external/407776843.hd.mp4?s=6c6cf52a6baa56955259aa2baf4c5f3c9706abfb&profile_id=175"
-    And enter duration as "1239"
+    And enter duration for the video
     And select Genre as "CARDIO"
     And select Level as "BEGINNER"
     And enter Playlist ID as "5eb135fc6f6bd011cc8bbb74"

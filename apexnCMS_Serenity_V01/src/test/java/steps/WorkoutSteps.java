@@ -49,14 +49,15 @@ public class WorkoutSteps {
 	}
 
 	@And("^enter VideoURL as \"([^\"]*)\"$")
-	public void enter_videourl_as_something(String strArg1) 
+	public void enter_videourl_as_something(String videourl) 
 	{
-		workout.enterVideoURL();
+		workout.enterVideoURL(videourl);
 	}
 
-	@And("^enter duration as \"([^\"]*)\"$")
-	public void enter_duration_as_something(String strArg1) 
-	{
+	@And("^enter duration for the video$")
+    public void enter_duration_for_the_video() 
+    {
+
 		workout.enterDuration();
 	}
 
@@ -74,21 +75,21 @@ public class WorkoutSteps {
 
 
     @And("^select Genre as \"([^\"]*)\"$")
-    public void select_genre_as_something(String strArg1) 
+    public void select_genre_as_something(String gener) 
     {
-    	workout.selectGenere();
+    	workout.selectGenere(gener);
     }
 
     @And("^select Level as \"([^\"]*)\"$")
-    public void select_level_as_something(String strArg1)
+    public void select_level_as_something(String level) 
     {
-    	workout.selectLevel();
+    	workout.selectLevel(level);
     }
 
 	@And("^enter Playlist ID as \"([^\"]*)\"$")
-	public void enter_playlist_id_as_something(String strArg1)
+	public void enter_playlist_id_as_something(String PlaylistID)
 	{
-		workout.EnterPlaylistID();
+		workout.EnterPlaylistID(PlaylistID);
 	}
 
 	@And("^select Music category$")

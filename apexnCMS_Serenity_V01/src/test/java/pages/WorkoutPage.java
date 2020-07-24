@@ -34,9 +34,9 @@ public class WorkoutPage {
 	}
 
 	@Step
-	public void enterVideoURL() 
+	public void enterVideoURL(String videourl) 
 	{
-		workelements.EnterWorkoutVideoURL();
+		workelements.EnterWorkoutVideoURL(videourl);
 		
 	}
 	
@@ -61,23 +61,23 @@ public class WorkoutPage {
 	}
 
 	@Step
-	public void selectGenere() 
+	public void selectGenere(String gener) 
 	{
-		workelements.SelectWorkoutGener();
+		workelements.SelectWorkoutGener(gener);
 		
 	}
 
 	@Step
-	public void selectLevel() 
+	public void selectLevel(String level) 
 	{
-		workelements.SelectWorkoutLevel();
+		workelements.SelectWorkoutLevel(level);
 		
 	}
 
 	@Step
-	public void EnterPlaylistID() 
+	public void EnterPlaylistID(String PlaylistID) 
 	{
-		workelements.EnterWorkoutPlaylistID();
+		workelements.EnterWorkoutPlaylistID(PlaylistID);
 	}
 
 	@Step

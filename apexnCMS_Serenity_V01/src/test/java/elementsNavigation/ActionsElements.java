@@ -45,25 +45,7 @@ public class ActionsElements extends PageObject{
 	}
 	@Step
 	public void deselectArchive() 
-	{
-//		checkboxArchive.waitUntilClickable();
-//		
-//		Boolean checekboxDisplay = checkboxArchive.isDisplayed();
-//		System.out.println("Is the checkbox displayed: " + checekboxDisplay);
-//		
-//		if(checkboxArchive.isSelected())
-//		{
-//			Boolean checkboxSelected = checkboxArchive.isSelected();
-//			System.out.println("Is the checkbox selected: "+ checkboxSelected);
-//		}
-//		else
-//		{
-//			checkboxArchive.click();
-//			
-//			Boolean checkboxStatus = checkboxArchive.isSelected();
-//			System.out.println("The updated status of checkbox is: "+ checkboxStatus);
-//		}
-		
+	{	
 		
 		checkboxArchive.waitUntilClickable();
 		Boolean checekboxDisplay = checkboxArchive.isDisplayed();
