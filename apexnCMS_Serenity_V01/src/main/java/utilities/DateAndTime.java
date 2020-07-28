@@ -1,33 +1,34 @@
 package utilities;
 
-import java.util.Date;
+
+
+import java.text.SimpleDateFormat;
+import java.util.concurrent.TimeUnit;
 
 import com.github.javafaker.Faker;
 
 public class DateAndTime {
-	
-	static Faker faker = new Faker();
-	static Date now = new Date();
-    static Date then = new Date(now.getTime() + 1000);
-	
-	String name = faker.name().fullName();
-	
-	
-//	Date date = faker.date().between(now, then);
-	
-	public static void main(String[] args) {
-		
-		DateAndTime date = new DateAndTime();
-		
-		Date date1 = faker.date().between(now, then);
-		
-		for (int i =0; i< 1000; i++)
-		{
-		System.out.println(date1);
-		}
-	}
-	
-}
-	
 
-    
+	static Faker faker = new Faker();
+
+
+
+
+	public static void main(String[] args) 
+	{
+
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm");
+
+		String date1 = sdf.format(faker.date().future(89, TimeUnit.DAYS));
+
+		System.out.println(date1);
+		
+		String date2  = sdf1.format(faker.date().future(500, TimeUnit.MINUTES));
+		System.out.println(date2);
+
+	}
+}
+
+

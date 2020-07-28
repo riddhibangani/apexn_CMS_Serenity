@@ -14,7 +14,7 @@
 		<cucumber.version>5.5.0</cucumber.version>
 		<encoding>UTF-8</encoding>
 		<tags></tags>
-		<parallel.tests>1</parallel.tests>
+		<parallel.tests>3</parallel.tests>
 		<webdriver.base.url></webdriver.base.url>
 	</properties>
 
@@ -136,7 +136,7 @@
 						<webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
 					</systemPropertyVariables>
 					<parallel>classes</parallel>
-					<threadCount>${parallel.tests}</threadCount>
+					<threadCount>3</threadCount>
 					<forkCount>${parallel.tests}</forkCount>
 				</configuration>
 				<executions>
