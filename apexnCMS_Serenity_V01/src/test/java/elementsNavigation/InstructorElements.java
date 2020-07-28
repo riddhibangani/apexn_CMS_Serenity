@@ -121,10 +121,11 @@ public class InstructorElements extends PageObject
 		System.out.println("Input Element" + lnkSelectFileInput.getTextValue());
 		System.out.println("File Element" + lnkSelectFile.getTextValue());
 
+		withAction().moveToElement(lnkSelectFileInput);
 		lnkSelectFileInput.sendKeys(filepath);
 		System.out.println("Keys sent");
 
-		lnkSelectFile.click();
+//		lnkSelectFile.click();
 
 		//FileToUpload fileToUpload = new FileToUpload(getDriver(), filename); 
 

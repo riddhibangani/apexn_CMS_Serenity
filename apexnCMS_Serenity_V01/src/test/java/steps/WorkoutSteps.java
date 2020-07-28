@@ -45,18 +45,19 @@ public class WorkoutSteps {
 	@And("^update Title and Description for Workouts$")
 	public void update_title_and_description_for_workouts() 
 	{
-		workout.enterTitleAndDescription();
+		workout.updateTitleAndDescription();
 	}
 
-	@And("^enter VideoURL as \"([^\"]*)\"$")
-	public void enter_videourl_as_something(String videourl) 
+	@And("^enter VideoURL as (.+)$")
+	public void enter_videourl_as(String videourl)
+
 	{
 		workout.enterVideoURL(videourl);
 	}
 
 	@And("^enter duration for the video$")
-    public void enter_duration_for_the_video() 
-    {
+	public void enter_duration_for_the_video() 
+	{
 
 		workout.enterDuration();
 	}
@@ -74,22 +75,22 @@ public class WorkoutSteps {
 	}
 
 
-    @And("^select Genre as \"([^\"]*)\"$")
-    public void select_genre_as_something(String gener) 
-    {
-    	workout.selectGenere(gener);
-    }
-
-    @And("^select Level as \"([^\"]*)\"$")
-    public void select_level_as_something(String level) 
-    {
-    	workout.selectLevel(level);
-    }
-
-	@And("^enter Playlist ID as \"([^\"]*)\"$")
-	public void enter_playlist_id_as_something(String PlaylistID)
+	@And("^select Genre as (.+)$")
+	public void select_genre_as(String genere) 
 	{
-		workout.EnterPlaylistID(PlaylistID);
+		workout.selectGenere(genere);
+	}
+
+	@And("^select Level as (.+)$")
+	public void select_level_as(String level) 
+	{
+		workout.selectLevel(level);
+	}
+
+	@And("^enter Playlist ID as (.+)$")
+	public void enter_playlist_id_as(String playlistid)
+	{
+		workout.EnterPlaylistID(playlistid);
 	}
 
 	@And("^select Music category$")
@@ -113,35 +114,58 @@ public class WorkoutSteps {
 	@Then("^the workout is updated successfully$")
 	public void the_workout_is_updated_successfully() 
 	{
-		workout.verifyNewlyAddedWorkout();
+		workout.verifyNewlyUpdatedWorkout();
 	}
 
+	@And("^click on the existing active workout on demand$")
+	public void click_on_the_existing_active_workout_on_demand()
+	{
+		workout.clickOnActiveWrkOutOnDemand();
+	}
 
+	@Then("^the workout on demand is archived$")
+	public void the_workout_on_demand_is_archived() 
+	{
+		workout.verifyWrkOnDemandArchive();
+	}
+
+	@And("^click on the existing archived workout on demand$")
+	public void click_on_the_existing_archived_workout_on_demand() 
+	{
+		workout.clickOnArchivedWrkOutOnDemand();
+	}
+
+	@Then("^the workout on demand is unarchived$")
+	public void the_workout_on_demand_is_unarchived()
+	{
+		workout.verifyWrkOutOnDemandUnArchive();
+	}
 
 
 	@When("^click on add splits$")
 	public void click_on_add_splits() 
 	{
-		
+
 		workout.clickOnAddSplits();
 	}
 
 	@And("^select New split$")
-	public void select_new_split() 
+	public void select_new_split()
 	{
 		workout.clickOnNewSplit();
 	}
 
-	@And("^enter Name , Start and End$")
-	public void enter_name_start_and_end() 
+	@And("^enter splits details as (.+)  and (.+) and (.+)$")
+	public void enter_splits_details_as_and_and(String name, String start, String end)
 	{
-		workout.enterSplitDetails();
+		workout.enterSplitDetails(name,start,end);
 	}
 
-	@And("^update the split details$")
-	public void update_the_split_details()
+	@And("^update splits details as (.+)  and (.+) and (.+)$")
+	public void update_splits_details_as_and_and(String name, String start, String end) 
 	{
-		workout.updateSplitDetails();
+
+		workout.updateSplitDetails(name,start,end);
 	}
 
 
@@ -157,10 +181,11 @@ public class WorkoutSteps {
 		workout.SelectSegment1();
 	}
 
-	@And("^enter  segment details$")
-	public void enter_segment_details()
+	@And("^enter  segment details as (.+) and (.+) and (.+) and (.+) and (.+) and (.+)$")
+	public void enter_segment_details_as_and_and_and_and_and(String segmentstart, String segmentend, String rpmlow, String rpmhigh, String resistancelow, String resistancehigh) 
 	{
-		workout.enterSegmentDetails();
+
+		workout.enterSegmentDetails(segmentstart,segmentend,rpmlow,rpmhigh,resistancelow,resistancehigh);
 	}
 
 }

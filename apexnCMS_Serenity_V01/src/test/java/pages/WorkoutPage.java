@@ -1,5 +1,7 @@
 package pages;
 
+import org.aspectj.weaver.World;
+
 import elementsNavigation.WorkoutElements;
 import net.thucydides.core.annotations.Step;
 
@@ -36,6 +38,7 @@ public class WorkoutPage {
 	@Step
 	public void enterVideoURL(String videourl) 
 	{
+		
 		workelements.EnterWorkoutVideoURL(videourl);
 		
 	}
@@ -117,18 +120,18 @@ public class WorkoutPage {
 	}
 
 	@Step
-	public void enterSplitDetails() 
+	public void enterSplitDetails(String name, String start, String end) 
 	{
 		
-		workelements.EnterSplitDetails();
+		workelements.EnterSplitDetails(name,start,end);
 		
 	}
 
 	@Step
-	public void updateSplitDetails() 
+	public void updateSplitDetails(String name, String start, String end) 
 	{
 		
-		workelements.UpdateSplitDetails();
+		workelements.UpdateSplitDetails(name,start,end);
 		
 	}
 
@@ -149,9 +152,51 @@ public class WorkoutPage {
 	}
 	
 	@Step
-	public void enterSegmentDetails() 
+	public void enterSegmentDetails(String segmentstart, String segmentend, String rpmlow, String rpmhigh, String resistancelow, String resistancehigh) 
 	{
-		workelements.EnterAllSegmentDetails();
+		workelements.EnterAllSegmentDetails(segmentstart,segmentend,rpmlow,rpmhigh,resistancelow,resistancehigh);
+	}
+	
+	@Step
+	public void clickOnActiveWrkOutOnDemand() 
+	{
+		workelements.ClickOnActiveWorkoutOnDemand();
+		
+	}
+	
+	@Step
+	public void verifyWrkOnDemandArchive() 
+	{
+		workelements.VerifyArchivedWorkoutOnDemand();
+		
+	}
+	
+	@Step
+	public void clickOnArchivedWrkOutOnDemand() 
+	{
+		workelements.ClickOnArchivedWorkoutOnDemand();
+		
+	}
+	
+	@Step
+	public void verifyWrkOutOnDemandUnArchive() {
+		
+		workelements.VerifyUnArchivedWorkoutOnDemand();
+		
+	}
+	
+	@Step
+	public void updateTitleAndDescription() 
+	{
+		workelements.updateWorkoutTitleAndDescription();
+		
+	}
+	
+	@Step
+	public void verifyNewlyUpdatedWorkout() 
+	{
+		workelements.VerifyNewWorkoutUpdated();
+		
 	}
 
 }

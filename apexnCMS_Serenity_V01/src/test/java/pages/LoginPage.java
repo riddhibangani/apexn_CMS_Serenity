@@ -21,14 +21,14 @@ public class LoginPage {
 	public void enterUsernameAndPassword() throws InterruptedException
 	{
 		loginelements.enterUserAndPassword();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 	
 	@Step
 	public void clickOnLoginButton() throws InterruptedException
 	{
 		loginelements.clickLogin();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 	
 	

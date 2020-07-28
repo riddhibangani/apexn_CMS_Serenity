@@ -17,6 +17,7 @@ public class ConfigFileReader {
 	private String password;
 	private String file;
 	private String report;
+	private String maxMonth;
 
 	public ConfigFileReader() 
 	{
@@ -26,6 +27,7 @@ public class ConfigFileReader {
 		password = properties.getProperty("PASSWORD");
 		file = properties.getProperty("FILE");
 		report = properties.getProperty("reportConfigPath");
+		maxMonth = properties.getProperty("WORKOUT_LIVE_MAX_MONTH");
 	}
 
 	public void readPropertyfile()
@@ -85,6 +87,15 @@ public class ConfigFileReader {
 			return file;
 		else throw new RuntimeException("FILE not specified in cofig.property");
 	}
+	
+	public String getMaxMonth()
+	{
+
+		if(maxMonth!= null)
+			return maxMonth;
+		else throw new RuntimeException("WORKOUT_LIVE_MAX_MONTH not specified in cofig.property");
+	}
+	
 	
 	public String getReportConfigPath(){
 		 String reportConfigPath = properties.getProperty("reportConfigPath");

@@ -11,7 +11,7 @@ public class DashboardPage {
 	@Step
 	public void LoginSuccess() throws InterruptedException
 	{
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		dashelements.loginVerify();
 	}
 	
