@@ -14,7 +14,7 @@
 		<cucumber.version>5.5.0</cucumber.version>
 		<encoding>UTF-8</encoding>
 		<tags></tags>
-		<parallel.tests>3</parallel.tests>
+		<parallel.tests>8</parallel.tests>
 		<webdriver.base.url></webdriver.base.url>
 	</properties>
 
@@ -111,7 +111,41 @@
 			<version>1.0.2</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.1.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>6.3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<!-- <dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>6.3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>6.3.0</version>
+			<scope>test</scope>
+		</dependency> -->
+
+
 	</dependencies>
+
+
 	<build>
 		<plugins>
 			<plugin>
@@ -122,6 +156,8 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+
+
 			<plugin>
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>2.22.1</version>
@@ -137,7 +173,7 @@
 					</systemPropertyVariables>
 					<parallel>classes</parallel>
 					<threadCount>3</threadCount>
-					<forkCount>${parallel.tests}</forkCount>
+
 				</configuration>
 				<executions>
 					<execution>
@@ -182,6 +218,42 @@
 				</executions>
 			</plugin>
 		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											com.github.temyers
+										</groupId>
+										<artifactId>
+											cucumber-jvm-parallel-plugin
+										</artifactId>
+										<versionRange>
+											[4.2.0,)
+										</versionRange>
+										<goals>
+											<goal>generateRunners</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 
 </project>

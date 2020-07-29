@@ -14,7 +14,7 @@ Feature: Ability to add and edit instructors
   Scenario: Add new instructor
     When click on Create a new instructor button
     And enter name and bio
-    When click on select the file to import at "/Users/user/Downloads/1589466155796-1024.png"
+    When click on select the file to import at "testimage.png"
     And click on save button
     Then the new instructor is added successfully
     

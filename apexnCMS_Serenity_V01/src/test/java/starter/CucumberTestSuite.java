@@ -10,9 +10,10 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		dryRun = false,
-		tags= "@filterMusic",
+		tags= "@filter",
 		
-        plugin = {"pretty"},
+        plugin = {"pretty",
+				 "html:target/cucumber-reports/HTMLReports/reports.html"},
         features = "src/test/resources/features",
         glue = {"steps"}
 )

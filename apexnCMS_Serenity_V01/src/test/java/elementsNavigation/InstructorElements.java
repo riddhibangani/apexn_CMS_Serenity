@@ -46,7 +46,9 @@ public class InstructorElements extends PageObject
 //	@CacheLookup
 	WebElementFacade checkboxArchive;
 
-	@FindBy(xpath = "//*[@id=\"file\"]/div/button/span/input")
+//	@FindBy(xpath = "//*[@id=\"file\"]/div/button/span/input")
+	
+	@FindBy(id = "file-input")
 	//	@CacheLookup
 	WebElementFacade lnkSelectFileInput;
 
@@ -122,7 +124,11 @@ public class InstructorElements extends PageObject
 		System.out.println("File Element" + lnkSelectFile.getTextValue());
 
 		withAction().moveToElement(lnkSelectFileInput);
-		lnkSelectFileInput.sendKeys(filepath);
+		String path = System.getProperty("user.dir")+"/src/test/resources/TestData/";
+		
+//		String path = this.getClass().getClassLoader().getResource(filepath).getPath();
+		
+		lnkSelectFileInput.sendKeys(path+filepath);
 		System.out.println("Keys sent");
 
 //		lnkSelectFile.click();
