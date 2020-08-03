@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		dryRun = false,
-		tags= "@filter",
+		tags= "@deleteliveworkouts",
 		
         plugin = {"pretty",
 				 "html:target/cucumber-reports/HTMLReports/reports.html"},

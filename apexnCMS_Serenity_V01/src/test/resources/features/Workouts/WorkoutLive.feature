@@ -25,10 +25,23 @@ Feature: Ability to add and edit Workouts live
     When specify that the user use weights
     And select Music category
     And select Instructor
-    When click on select the file to import at "/Users/user/Downloads/1589466155796-1024.png"
-    And click on save button
+    When click on select the file to import at "testimage.png" for live workout
+    And click on save button for live workout
     Then the new live workout is added successfully
 
     Examples: 
       | Vimeo                                                                                                        | genere    | level    | playlistID               |
       | https://player.vimeo.com/external/427286507.source.mp4?s=480d3093e25d70c79b4cbada0453232b5e31d0ff&download=1 | ENDURANCE | ADVANCED | 5eb135fc6f6bd011cc8bbb74 |
+
+  #@deleteliveworkouts
+  #Scenario: Delete live workout
+    #When click on delete workout
+    #And confirm on delete item popup
+    #Then the workout is deleted
+
+  @editliveworkouts
+  Scenario: Edit existing live workout
+    And click on the existing live workout
+    And update Title and Description for live Workouts
+    And click on save button for live workout
+    Then the live workout is updated successfully

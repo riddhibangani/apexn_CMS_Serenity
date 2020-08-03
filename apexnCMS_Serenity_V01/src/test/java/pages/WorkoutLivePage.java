@@ -71,4 +71,54 @@ public class WorkoutLivePage {
 		
 	}
 
+	@Step
+	public void SelectFiletoImport(String importfile) throws InterruptedException 
+	{
+		workliveelements.SelectAndUploadFile(importfile);
+		
+	}
+
+	@Step
+	public void clickOnExistingLiveWorkout() 
+	{
+		workliveelements.clickonexistingLiveWorkout();
+		
+	}
+
+	@Step
+	public void updateLiveTitleAndDescription() 
+	{
+		workliveelements.updateLiveWorkoutTitleAndDescription();
+		
+	}
+
+	@Step
+	public void verifyNewlyUpdatedLiveWorkout() 
+	{
+		workliveelements.VerifyNewLiveWorkoutUpdated();
+		
+	}
+
+	@Step
+	public void deleteLiveWorkout() 
+	{
+	
+		workliveelements.ClickonDeleteicon();
+		
+	}
+
+	@Step
+	public void clickonConfirmDelete() 
+	{
+		
+		workliveelements.ClickOnConfirmDelete();
+	}
+
+	@Step
+	public void verifyDeletedLiveWrkout() 
+	{
+		
+		workliveelements.VerifyLiveWorkoutisDeleted();
+	}
+
 }

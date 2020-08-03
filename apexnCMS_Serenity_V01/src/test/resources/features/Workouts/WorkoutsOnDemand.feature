@@ -22,7 +22,7 @@ Feature: Ability to add and edit Workouts
     When specify that the user use weights
     And select Music category
     And select Instructor
-    When click on select the file to import at "/Users/user/Downloads/1589466155796-1024.png"
+    When click on select the file to import at "testimage.png"
     And click on save button
     Then the new workout is added successfully
 
@@ -42,7 +42,7 @@ Feature: Ability to add and edit Workouts
     When specify that the user do not use weights
     And select Music category
     And select Instructor
-    When click on select the file to import at "/Users/user/Downloads/1589466155796-1024.png"
+    When click on select the file to import at "testimage.png"
     And click on save button
     Then the new workout is added successfully
 
@@ -62,7 +62,7 @@ Feature: Ability to add and edit Workouts
     When specify that the user do not use weights
     And select Music category
     And select Instructor
-    When click on select the file to import at "/Users/user/Downloads/1589466155796-1024.png"
+    When click on select the file to import at "testimage.png"
     When click on add splits
     And select New split
     And enter splits details as <Name>  and <Start> and <End>
@@ -85,7 +85,7 @@ Feature: Ability to add and edit Workouts
     When specify that the user do not use weights
     And select Music category
     And select Instructor
-    When click on select the file to import at "/Users/user/Downloads/1589466155796-1024.png"
+    When click on select the file to import at "testimage.png"
     When click on add splits
     And select New split
     And enter splits details as <Name>  and <Start> and <End>

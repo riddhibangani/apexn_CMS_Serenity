@@ -42,7 +42,7 @@ public class GenerateRandomeString {
 		InstName = faker.name().firstName();
 		InstName1 = faker.name().firstName();
 		
-		InstBio = RandomStringUtils.randomAlphanumeric(20);
+		InstBio = faker.expression("Description for the instructor " + InstName);
 		InstBio1 = RandomStringUtils.randomAlphanumeric(20);
 		
 		MscTitle =faker.music().genre();

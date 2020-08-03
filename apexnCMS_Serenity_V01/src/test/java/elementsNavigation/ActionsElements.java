@@ -20,11 +20,21 @@ public class ActionsElements extends PageObject{
 	
 	//mat-checkbox[@id='is-archived']/lable
 	
+	@FindBy(xpath = "//mat-card-actions//div//span")
+	WebElementFacade btn_Save_LiveWrk;
+			
 	@Step
 	public void clicksaveButton()
 
 	{
 		btnSave_Inst.click();
+	}
+	
+	@Step
+	public void clicksaveLiveWrkButton()
+
+	{
+		btn_Save_LiveWrk.click();
 	}
 	
 	@Step
